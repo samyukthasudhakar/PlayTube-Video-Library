@@ -1,0 +1,12 @@
+.category-link{
+    padding: 2px 5px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: var(--clr-secondary);
+}
+
+.category-link:hover{
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    cursor: pointer;
+}

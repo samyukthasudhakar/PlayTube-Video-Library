@@ -1,0 +1,31 @@
+.side-navigation{
+    position: sticky;
+    width: 6.5rem;
+    height: 100vh;
+}
+
+.nav-pill{
+    list-style: none;
+    margin: 1.5rem 4px;
+    padding: 8px 4px;
+    width: 90%;
+    border-radius: 2px;
+}
+
+.nav-pill:hover{
+    background-color: var(--clr-secondary);
+    cursor: pointer;
+}
+
+.nav-img{
+    width: 1.2rem;
+}
+
+.nav-text{
+    font-size: 12px;
+    font-weight: 430;
+}
+
+a:hover{
+    color: var(--clr-black);
+}
