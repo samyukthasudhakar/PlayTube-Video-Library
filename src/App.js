@@ -5,7 +5,9 @@ import {
   PlaylistPage,
   WatchLaterPage,
   LikedPage,
-  HistoryPage
+  HistoryPage,
+  Login,
+  SignUp
 } from 'pages'
 
 import "./App.css";
@@ -19,6 +21,8 @@ function App() {
         <Route path='/watchlater' element={<WatchLaterPage />} />
         <Route path='/liked' element={<LikedPage />} />
         <Route path='/history' element={<HistoryPage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
     </div>
   );

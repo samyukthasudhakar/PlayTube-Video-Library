@@ -1,8 +1,11 @@
 import { Header, SideNavBar, VideoCard, CategoryLink } from 'components'
+import { useVideos } from 'context'
+
 import './home.css'
 
 function HomePage(){
-    const categories = ["All", "Movies", "Music", "Comedy", "Documentaries"]
+    const {data:{videos, categories, categoryFilter}, getFilteredData} = useVideos()
+    const filteredData  = getFilteredData(categoryFilter, videos)
     return (
         <div>
             <Header />
@@ -11,14 +14,13 @@ function HomePage(){
                 <div className='flex-column video-listing' >
                     <div className='flex-layout categories-container'>
                     {
-                        categories.map(category => <CategoryLink name={category} />)
+                        categories.map(({_id, category}) => <CategoryLink key={_id} name={category} />)
                     }
                     </div>
                     <div className='flex-layout flex-wrap '>
-                    <VideoCard />
-                    <VideoCard />
-                    <VideoCard />
-                    <VideoCard />
+                    {
+                        filteredData.map(video => <VideoCard key={video._id} video={video}/>)
+                    }
                     </div>
                 </div>
             </div>
