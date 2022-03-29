@@ -6,14 +6,23 @@ import { formatDate } from "../utils/authUtils";
  * Every user will have likes (Likes are set to 0 by default), History Array, Playlists Array (added Watch Later Playlist in it by default) by default
  * */
 
-export const users = [
+ export const users = [
   {
     _id: uuid(),
-    firstName: "Adarsh",
-    lastName: "Balika",
-    email: "adarshbalika@gmail.com",
-    password: "adarshBalika123",
+    firstName: "Samyuktha",
+    lastName: "Sudhakar",
+    email: "samyuktha@gmail.com",
+    password: "password123",
     createdAt: formatDate(),
     updatedAt: formatDate(),
   },
+  {
+    _id: uuid(),
+    firstName: "John",
+    lastName: "Doe",
+    email: 'johndoe@gmail.com',
+    password: "john123",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  }
 ];
