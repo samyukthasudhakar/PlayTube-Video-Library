@@ -28,7 +28,7 @@ export const videos = [
     creator: "Cooking 101",
     duration: "12:30",
     icon: healthyFood,
-    category: 'Cooking',
+    category: 'Food',
     views: "30k",
     likes: "10k"
   },
@@ -39,7 +39,7 @@ export const videos = [
     creator: "Cooking 101",
     duration: "7:00",
     icon: meals,
-    category: 'Cooking',
+    category: 'Food',
     views: "30k",
     likes: "10k"
   },
