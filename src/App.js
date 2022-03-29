@@ -6,7 +6,7 @@ import {
   WatchLaterPage,
   LikedPage,
   HistoryPage
-} from '../src/pages'
+} from 'pages'
 
 import "./App.css";
 

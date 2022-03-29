@@ -1,9 +1,9 @@
-import { Header } from './header/header'
-import { SideNavBar } from './sideBar/sideBar'
-import { NotSignedIn } from './notSignedIn/notSignedIn'
-import { VideoCard } from './videoCard/videoCard'
-import { CategoryLink } from './categoryLink/categoryLink'
-import { MenuPopUp } from './menuPopUp/menuPopUp'
+import { Header } from 'components/header'
+import { SideNavBar } from 'components/sideBar'
+import { NotSignedIn } from 'components/notSignedIn'
+import { VideoCard } from 'components/videoCard'
+import { CategoryLink } from 'components/categoryLink'
+import { MenuPopUp } from 'components/menuPopUp'
 
 export { 
     Header,

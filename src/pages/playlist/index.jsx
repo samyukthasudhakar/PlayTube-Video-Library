@@ -1,9 +1,9 @@
-import { playlist } from '../../assets/icons'
+import { playlist } from 'assets/icons'
 import { 
     Header, 
     SideNavBar,
     NotSignedIn
-} from '../../components'
+} from 'components'
 
 function PlaylistPage(){
     return (
@@ -11,7 +11,7 @@ function PlaylistPage(){
             <Header />
             <div className="flex-layout">
                 <SideNavBar /> 
-                <div style={{backgroundColor:"#f9f9f9", width:"100vw"}} >
+                <div className='video-listing' >
                 <NotSignedIn icon={playlist} name="Playlists" tagline="Enjoy your favourite playlists" />
                 </div>
             </div>

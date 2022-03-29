@@ -7,7 +7,7 @@ import {
     like,
     playlist,
     watchLater,
-} from "../../assets/icons";
+} from "assets/icons";
 
 export function SideNavBar() {
   const navLinks = [
@@ -21,16 +21,16 @@ export function SideNavBar() {
   return (
     <aside className="side-navigation">
       <ul>
-        {navLinks.map((navLink) => {
+        {navLinks.map(({link, icon, name},index) => {
           return (
-            <Link to={navLink.link}
+            <Link key={index} to={link}
               className="flex-column flex-center nav-pill"
             >
               <li>
-                <img className="nav-img" src={navLink.icon} />
+                <img className="nav-img" src={icon} />
               </li>
               <li className="nav-text">
-                {navLink.name}
+                {name}
               </li>
             </Link>
           );

@@ -1,8 +1,8 @@
-import { HomePage } from './home/home'
-import { PlaylistPage } from './playlist/playlist'
-import { WatchLaterPage } from './watchLater/watchLater'
-import { LikedPage } from './liked/liked'
-import { HistoryPage } from './history/history'
+import { HomePage } from 'pages/home'
+import { PlaylistPage } from 'pages/playlist'
+import { WatchLaterPage } from 'pages/watchLater'
+import { LikedPage } from 'pages/liked'
+import { HistoryPage } from 'pages/history'
 
 export {
     HomePage,

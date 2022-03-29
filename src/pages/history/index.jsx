@@ -1,5 +1,5 @@
-import { history } from '../../assets/icons'
-import { Header, SideNavBar, NotSignedIn } from '../../components'
+import { history } from 'assets/icons'
+import { Header, SideNavBar, NotSignedIn } from 'components'
 
 function HistoryPage(){
     return (
@@ -7,7 +7,7 @@ function HistoryPage(){
             <Header />
             <div className="flex-layout">
                 <SideNavBar /> 
-                <div style={{backgroundColor:"#f9f9f9", width:"100vw"}} >
+                <div className='video-listing' >
                 <NotSignedIn icon={history} name="History" tagline="Keep track of what you watch" />
                 </div>
             </div>

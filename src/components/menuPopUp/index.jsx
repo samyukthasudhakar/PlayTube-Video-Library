@@ -1,7 +1,7 @@
 import {
     playlist,
     watchLater,
-} from "../../assets/icons";
+} from "assets/icons";
 
 export function MenuPopUp(){
     return (

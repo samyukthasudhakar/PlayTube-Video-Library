@@ -1,4 +1,4 @@
-import { Header, SideNavBar, VideoCard, CategoryLink } from '../../components'
+import { Header, SideNavBar, VideoCard, CategoryLink } from 'components'
 import './home.css'
 
 function HomePage(){

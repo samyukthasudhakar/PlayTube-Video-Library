@@ -1,5 +1,5 @@
-import { like } from '../../assets/icons'
-import { Header, SideNavBar, NotSignedIn } from '../../components'
+import { like } from 'assets/icons'
+import { Header, SideNavBar, NotSignedIn } from 'components'
 
 function LikedPage(){
     return (
@@ -7,7 +7,7 @@ function LikedPage(){
             <Header />
             <div className="flex-layout">
                 <SideNavBar /> 
-                <div style={{backgroundColor:"#f9f9f9", width:"100vw"}} >
+                <div className='video-listing' >
                 <NotSignedIn icon={like} name="Videos liked" tagline="Enjoy your favourite videos" />
                 </div>
             </div>

@@ -1,9 +1,9 @@
 import {useState} from 'react'
-import thumbnail from '../../assets/thumbnail.png'
-import {menu} from '../../assets/icons'
+import thumbnail from 'assets/thumbnail.png'
+import {menu} from 'assets/icons'
 import './videoCard.css'
 
-import { MenuPopUp } from '../menuPopUp/menuPopUp';
+import { MenuPopUp } from 'components/menuPopUp';
 
 export function VideoCard(){
 
