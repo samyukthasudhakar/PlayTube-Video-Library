@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     width: 20rem;
-    height: 16rem;
+    height: 15rem;
     background-color: var(--clr-white);
     cursor: pointer;
 }
@@ -24,7 +24,7 @@
     background-color: var(--clr-black);
     color: var(--clr-white);
     border-radius: 3px;
-    padding: 0.5px 1px;
+    padding: 0.5px 2px;
     font-size: small;
 }
 
@@ -49,7 +49,6 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 1.2rem;
-    margin-bottom: 4px;
 }
 
 .creator-name, .video-views{
