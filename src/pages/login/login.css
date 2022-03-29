@@ -1,0 +1,80 @@
+.auth-parent{
+    padding:0 3rem;
+    height:100vh;
+}
+
+.login-form{
+    width:20rem;
+    padding:1rem;
+    height: 27rem;
+}
+
+.glass-card{
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.form-input{
+    width:100%;
+    padding:7px;
+    border:none;
+    border-radius:4px;
+}
+
+.link-txt:hover{
+    color:var(--clr-primary);
+}
+
+.link-btn:hover{
+    color:var(--clr-white);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+/* 
+Link:hover{
+    color:var(--clr-white);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+} */
+
+.w-100{
+    width:100%
+}
+
+.auth-btn,.auth-btn-secondary{
+    background-color: var(--clr-primary);
+    border:none;
+    border-radius: 7px;
+    color:var(--clr-white);
+    font-size: medium;
+    padding:0.5rem;
+    width:100%;
+    margin: 0.5rem 0;
+}
+
+.auth-btn-secondary{
+    background-color: var(--clr-secondary);
+    color:var(--clr-black);
+}
+
+input[ type=checkbox ], input[ type=radio]{
+    margin:5px 3px 0 0;
+}
+
+.fs-13px{
+    font-size: 13px;
+}
+
+.space-between{
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.form-input{
+    border: solid 1px var(--clr-secondary);
+    border-radius: 3px;
+}
+
+.mg-1{
+    margin: 1rem;
+}
