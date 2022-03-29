@@ -1,0 +1,13 @@
+.video-listing{
+    width: 100vw;
+    padding: 8px 1rem;
+    background-color: #eee;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.categories-container{
+    padding: 7px;
+}
