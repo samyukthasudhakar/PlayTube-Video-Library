@@ -29,9 +29,6 @@ export function SideNavBar() {
               <li>
                 <img className="nav-img" src={icon} />
               </li>
-              <li className="nav-text">
-                {name}
-              </li>
             </Link>
           );
         })}
