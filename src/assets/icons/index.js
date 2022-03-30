@@ -3,7 +3,7 @@ import home from './home.png'
 import like from './like.png'
 import playlist from './playlist.png'
 import watchLater from './watchLater.png'
-import youtube from './youtube.png'
+import logo from './logo.png'
 import menu from './menu.png'
 
 export {
@@ -12,6 +12,6 @@ export {
     like,
     playlist,
     watchLater,
-    youtube,
+    logo,
     menu
 }

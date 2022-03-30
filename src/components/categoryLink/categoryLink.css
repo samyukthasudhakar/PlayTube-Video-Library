@@ -1,12 +1,17 @@
-.category-link{
+.category-link, .active-category-link{
     padding: 2px 5px;
     margin: 5px;
     border-radius: 3px;
     background-color: var(--clr-secondary);
+    cursor: pointer;
+}
+
+.active-category-link{
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
 }
 
 .category-link:hover{
     background-color: var(--clr-primary);
     color: var(--clr-white);
-    cursor: pointer;
 }
