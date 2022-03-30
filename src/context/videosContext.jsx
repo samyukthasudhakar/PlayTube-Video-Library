@@ -17,7 +17,6 @@ function VideosProvider({ children }){
         if(category==='All'){
             return [...videos]
         }
-        console.log(videos.filter(video => video.category===category))
         return videos.filter(video => video.category===category)
     }
 

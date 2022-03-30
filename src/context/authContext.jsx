@@ -13,13 +13,11 @@ function AuthProvider( {children}){
 
     const loginHandler = async (e, user) => {
         e.preventDefault()
-        console.log(user)
         try {
           const response = await axios.post(LOGIN_API, {
             email: user.email,
             password: user.password,
           });
-          console.log(response)
           authDispatch({type:'LOG_IN',payload:{email: user.email,token:response.data.encodedToken}})
           navigateTo('/')
         } catch (error) {
