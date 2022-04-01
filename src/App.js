@@ -7,7 +7,8 @@ import {
   LikedPage,
   HistoryPage,
   Login,
-  SignUp
+  SignUp,
+  SingleVideoPage
 } from 'pages'
 
 import "./App.css";
@@ -23,6 +24,7 @@ function App() {
         <Route path='/history' element={<HistoryPage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
+        <Route path='/watch/:videoID' element={<SingleVideoPage />} />
       </Routes>
     </div>
   );

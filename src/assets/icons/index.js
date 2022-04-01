@@ -5,6 +5,7 @@ import playlist from './playlist.png'
 import watchLater from './watchLater.png'
 import logo from './logo.png'
 import menu from './menu.png'
+import addToPlaylist from './addToPlaylist.png'
 
 export {
     history,
@@ -13,5 +14,6 @@ export {
     playlist,
     watchLater,
     logo,
-    menu
+    menu,
+    addToPlaylist
 }
