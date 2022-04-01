@@ -12,25 +12,42 @@ import {
 export const videos = [
   {
     _id: uuid(),
-    title: "How to Garden for Beginners",
-    thumbnail: gardening,
+    title: "Vegetable Garden Guide 🥕",
+    thumbnail: "http://img.youtube.com/vi/1X6KvqPjk6I/0.jpg",
     creator: "Gardening 101",
     duration: "10:00",
     icon: gardening,
     category: 'Gardening',
     views: "30k",
-    likes: "10k"
+    likes: "10k",
+    src: "1X6KvqPjk6I",
+    date: "31 March 2022"
   },
   {
     _id: uuid(),
-    title: "Healthy Food Tips",
-    thumbnail: healthyFood,
-    creator: "Cooking 101",
-    duration: "12:30",
-    icon: healthyFood,
-    category: 'Food',
+    title: "A Paradise called Pollachi",
+    thumbnail: "http://img.youtube.com/vi/UCEWM2Arkfg/0.jpg",
+    creator: "Travel 101",
+    duration: "03:15",
+    icon: travelJapan,
+    category: 'Travel',
     views: "30k",
-    likes: "10k"
+    likes: "10k",
+    src: "UCEWM2Arkfg",
+    date: "31 March 2022"
+  },
+  {
+    _id: uuid(),
+    title: "Starting Balcony Garden",
+    thumbnail: "http://img.youtube.com/vi/YF2iQAGA5Bg/0.jpg",
+    creator: "Garden 101",
+    duration: "12:30",
+    icon: gardening,
+    category: 'Gardening',
+    views: "30k",
+    likes: "10k",
+    src: "YF2iQAGA5Bg",
+    date: "31 March 2022"
   },
   {
     _id: uuid(),
@@ -41,7 +58,9 @@ export const videos = [
     icon: meals,
     category: 'Food',
     views: "30k",
-    likes: "10k"
+    likes: "10k",
+    src: "UCEWM2Arkfg",
+    date: "31 March 2022"
   },
   {
     _id: uuid(),
@@ -52,7 +71,9 @@ export const videos = [
     icon: money,
     category: 'Money',
     views: "30k",
-    likes: "10k"
+    likes: "10k",
+    src: "UCEWM2Arkfg",
+    date: "31 March 2022"
   },
   {
     _id: uuid(),
@@ -63,7 +84,9 @@ export const videos = [
     icon: music,
     category: 'Music',
     views: "30k",
-    likes: "10k"
+    likes: "10k",
+    src: "UCEWM2Arkfg",
+    date: "31 March 2022"
   },
   {
     _id: uuid(),
@@ -74,7 +97,9 @@ export const videos = [
     icon: travel,
     category: 'Travel',
     views: "30k",
-    likes: "10k"
+    likes: "10k",
+    src: "UCEWM2Arkfg",
+    date: "31 March 2022"
   },
   {
     _id: uuid(),
@@ -85,7 +110,8 @@ export const videos = [
     icon: travelJapan,
     category: 'Travel',
     views: "30k",
-    likes: "10k"
+    likes: "10k",
+    src: "UCEWM2Arkfg",
+    date: "31 March 2022"
   }
-  
 ];
