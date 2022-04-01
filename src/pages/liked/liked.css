@@ -1,0 +1,9 @@
+.liked-parent{
+    border-bottom: solid 1px grey;
+    margin: 8px; 
+}
+
+.liked-heading{
+    font-size: large;
+    font-weight: 600;
+}

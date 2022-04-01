@@ -1,0 +1,31 @@
+.iframe{
+    border:'none';
+    margin:'0 2rem'
+}
+
+.single-video-title{
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 2rem 0.5rem 2rem;
+}
+
+.video-details-secondary{
+    margin-left: 2rem;
+    color:grey;
+    font-size:13px;
+}
+
+.video-icon{
+    width: "1.2rem";
+    height: '1.2rem';
+    margin-right: "8px";
+}
+
+.padding-2{
+    padding: 2rem;
+}
+
+.padding-rl-2{
+    padding: 0 2rem;
+    cursor: pointer;
+}
