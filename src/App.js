@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
+import { useVideos } from 'context'
 import {
   HomePage,
   PlaylistPage,
@@ -7,12 +8,14 @@ import {
   LikedPage,
   HistoryPage,
   Login,
-  SignUp
+  SignUp,
+  SingleVideoPage
 } from 'pages'
 
 import "./App.css";
 
 function App() {
+  const { videos } = useVideos()  
   return (
     <div>
       <Routes>
@@ -23,6 +26,7 @@ function App() {
         <Route path='/history' element={<HistoryPage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
+        <Route path='/watch/:videoID' element={<SingleVideoPage />} />
       </Routes>
     </div>
   );
