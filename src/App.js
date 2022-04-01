@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-import { useVideos } from 'context'
 import {
   HomePage,
   PlaylistPage,
@@ -15,7 +14,6 @@ import {
 import "./App.css";
 
 function App() {
-  const { videos } = useVideos()  
   return (
     <div>
       <Routes>
