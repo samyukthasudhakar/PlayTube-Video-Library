@@ -23,7 +23,6 @@ function HistoryProvider( { children } ){
                 }
             ).then((response) => {
                 setHistory(response.data.history);
-                console.log(historyState)
             }).catch((error) => {
                 console.log(error)
             })
