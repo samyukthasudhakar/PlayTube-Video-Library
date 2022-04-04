@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from 'context'
+import { POST_WATCH_LATER, DELETE_WATCH_LATER } from 'utils/constants/apiEndPoints'
 import checkIfPresent from 'utils/functions/checkIfPresent'
 
 const watchLaterContext = createContext(null)
@@ -13,20 +14,45 @@ function WatchLaterProvider( { children } ){
     const navigateTo = useNavigate()
 
     function addToWatchLater( item ){
-        isLoggedIn ?
-        !checkIfPresent(item._id, watchLaterState) && setWatchLater([...watchLaterState, item]) 
-        : navigateTo('/login')
+        if (isLoggedIn && !checkIfPresent(item._id, watchLaterState)){
+            axios.post(POST_WATCH_LATER,
+                { video: item },
+                {
+                    headers: {
+                        authorization: token,
+                    },
+                }
+            ).then((response) => {
+                setWatchLater(response.data.watchlater);
+            }).catch((error) => {
+                console.log(error)
+            })
+        }else{
+            navigateTo('/login')
+        }
     }
     
     function removeFromWatchLater( item ){
-        setWatchLater(watchLaterState.filter(video => video._id != item._id))
+        if ( isLoggedIn ){
+            axios.delete(`${DELETE_WATCH_LATER}${item._id}`,
+                {
+                    headers: {
+                        authorization: token,
+                    },
+                }
+            ).then((response) => {
+                setWatchLater(response.data.watchlater);
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
     }
 
     function clearWatchLater(){
-        isLoggedIn && setWatchLater([])
+        if (isLoggedIn ){
+            watchLaterState.map( video => removeFromWatchLater( video ))
+        }
     }
-
-    
 
     return (
         <watchLaterContext.Provider value={{ watchLaterState, addToWatchLater, removeFromWatchLater, clearWatchLater }}>

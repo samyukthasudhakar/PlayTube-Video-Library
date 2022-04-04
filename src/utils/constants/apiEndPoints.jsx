@@ -4,7 +4,7 @@ const GET_VIDEOS = "/api/videos";
 const GET_CATEGORIES = "/api/categories";
 const POST_HISTORY = "/api/user/history";
 const POST_WATCH_LATER = "/api/user/watchlater";
-const DELETE_WATCH_LATER = "/api/user/watchlater/:videoId";
+const DELETE_WATCH_LATER = "/api/user/watchlater/";
 
 export {
   SIGNUP_API,
