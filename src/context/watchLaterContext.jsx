@@ -13,42 +13,46 @@ function WatchLaterProvider( { children } ){
     const { authState: {isLoggedIn, token} } = useAuth()
     const navigateTo = useNavigate()
 
-    function addToWatchLater( item ){
+    const addToWatchLater = async( item ) => {
         if (isLoggedIn && !checkIfPresent(item._id, watchLaterState)){
-            axios.post(POST_WATCH_LATER,
-                { video: item },
-                {
-                    headers: {
-                        authorization: token,
-                    },
-                }
-            ).then((response) => {
+            try{
+                const response = await axios.post(POST_WATCH_LATER,
+                    { video: item },
+                    {
+                        headers: {
+                            authorization: token,
+                        },
+                    }
+                )
                 setWatchLater(response.data.watchlater);
-            }).catch((error) => {
+            }
+            catch(error){
                 console.log(error)
-            })
+            }
         }else{
             navigateTo('/login')
         }
     }
     
-    function removeFromWatchLater( item ){
+    const removeFromWatchLater = async( item ) => {
         if ( isLoggedIn ){
-            axios.delete(`${DELETE_WATCH_LATER}${item._id}`,
+            try{
+                const response = await axios.delete(`${DELETE_WATCH_LATER}${item._id}`,
                 {
                     headers: {
                         authorization: token,
                     },
                 }
-            ).then((response) => {
+                )
                 setWatchLater(response.data.watchlater);
-            }).catch((error) => {
+            }
+            catch(error){
                 console.log(error)
-            })
+            }
         }
     }
 
-    function clearWatchLater(){
+    const clearWatchLater = () => {
         if (isLoggedIn ){
             watchLaterState.map( video => removeFromWatchLater( video ))
         }

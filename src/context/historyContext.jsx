@@ -12,24 +12,26 @@ function HistoryProvider( { children } ){
 
     const { authState: {isLoggedIn, token} } = useAuth()
 
-    function addToHistory( item ){
+    const addToHistory = async( item ) => {
         if (isLoggedIn && !checkIfPresent(item._id, historyState)){
-            axios.post(POST_HISTORY,
-                { video: item },
-                {
-                    headers: {
-                        authorization: token,
-                    },
-                }
-            ).then((response) => {
+            try{
+                const response = await axios.post(POST_HISTORY,
+                    { video: item },
+                    {
+                        headers: {
+                            authorization: token,
+                        },
+                    }
+                )
                 setHistory(response.data.history);
-            }).catch((error) => {
+            }
+            catch(error){
                 console.log(error)
-            })
+            }
         }
     }
 
-    function clearHistory(){
+    const clearHistory = () => {
         isLoggedIn && setHistory([])
     }
 
