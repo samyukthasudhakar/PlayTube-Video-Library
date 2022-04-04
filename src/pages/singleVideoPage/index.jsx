@@ -4,10 +4,11 @@ import { addToPlaylist, watchLater } from 'assets/icons'
 import { useVideos } from 'context'
 import { ReactComponent as Like } from 'assets/icons/like.svg';
 import { ReactComponent as Dislike } from 'assets/icons/dislike.svg';
-import { useLikedVideos } from 'context';
+import { useLikedVideos, useHistory } from 'context';
 import useScrollToTop from 'utils/hooks/useScrollToTop'
 
 import './singleVideoPage.css'
+import { useEffect } from 'react';
 
 function SingleVideoPage(){
     const { data: {videos} } = useVideos()
@@ -17,9 +18,11 @@ function SingleVideoPage(){
     const {_id, src, title, views, date} = video
     const { likedVideos, likeToggle } = useLikedVideos()
     const liked = likedVideos.filter(video => video._id == _id).length > 0 ? "black" : "none"
-    
+    const { addToHistory } = useHistory()
     useScrollToTop()
-
+    useEffect(()=>{
+        addToHistory(video)
+    },[])
     return (
         <div>
             <Header />

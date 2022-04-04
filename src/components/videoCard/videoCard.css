@@ -1,7 +1,8 @@
 .video-card{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     position:relative;
-    margin: 0.5rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     width: 20rem;
@@ -81,7 +82,9 @@
     background-color: white;
     padding: 3px 0;
     position: absolute;
-    left: 9rem;
+    left: 8rem;
+    top: 11rem;
+    max-width: 10rem;
 }
 
 .menu-option{

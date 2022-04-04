@@ -26,7 +26,7 @@ export function VideoCard( {video} ){
                     <img className='menu' src={menu} onClick={()=>setMenuToggle(!menuToggle)}/>
                 </div>
                 {
-                    menuToggle && <MenuPopUp />
+                    menuToggle && <MenuPopUp video={video}/>
                 }
             </div>
         </div>
