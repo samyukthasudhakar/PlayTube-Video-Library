@@ -15,9 +15,7 @@ export function PlayListPopup( {video} ){
     }
 
     function videoInPlaylist( playlistId, videoId){
-        console.log(playlists.filter( item => item._id===playlistId))
         const {videos} = playlists.filter( item => item._id===playlistId)[0]
-        console.log(videos)
         return videos.some((item) => item._id === videoId )
     }
 
