@@ -1,0 +1,22 @@
+.playlist-dismiss, .playlist-listing-dismiss{
+    background: transparent;
+    border:none;
+    width:2rem;
+    height:2rem;
+    font-size: medium;
+    top: 8px;
+    right: 8px;
+    position: absolute;
+    color: grey;
+}   
+
+.playlist-listing-dismiss{
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    right: 1.2rem;
+    top: 1.2rem;
+}
+
+.playlist-dismiss:hover, .playlist-listing-dismiss:hover{
+    color: var(--clr-black);
+}
