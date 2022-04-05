@@ -1,3 +1,19 @@
+.heading-icon{
+    width: 1.5rem;
+    padding-right: 3px;
+}
+
+.playlist-card{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 1rem;
+    width: 15rem;
+    height: 7rem;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--clr-white);
+}
+
 .playlist-dismiss, .playlist-listing-dismiss{
     background: transparent;
     border:none;
@@ -19,4 +35,8 @@
 
 .playlist-dismiss:hover, .playlist-listing-dismiss:hover{
     color: var(--clr-black);
+}
+
+.relative{
+    position: relative
 }
