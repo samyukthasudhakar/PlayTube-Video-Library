@@ -5,7 +5,7 @@ import { VideoCard } from './videoCard'
 import { CategoryLink } from './categoryLink'
 import { MenuPopUp } from './menuPopUp'
 import { PlayListPopup } from './playlistPopUp'
-import { PlaylistParent } from './playlistParent'
+
 export { 
     Header,
     SideNavBar,
@@ -13,6 +13,5 @@ export {
     VideoCard,
     CategoryLink,
     MenuPopUp,
-    PlayListPopup,
-    PlaylistParent
+    PlayListPopup
 }
