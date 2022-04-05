@@ -1,15 +1,18 @@
-import { Header } from 'components/header'
-import { SideNavBar } from 'components/sideBar'
-import { NotSignedIn } from 'components/notSignedIn'
-import { VideoCard } from 'components/videoCard'
-import { CategoryLink } from 'components/categoryLink'
-import { MenuPopUp } from 'components/menuPopUp'
-
+import { Header } from './header'
+import { SideNavBar } from './sideBar'
+import { NotSignedIn } from './notSignedIn'
+import { VideoCard } from './videoCard'
+import { CategoryLink } from './categoryLink'
+import { MenuPopUp } from './menuPopUp'
+import { PlayListPopup } from './playlistPopUp'
+import { PlaylistParent } from './playlistParent'
 export { 
     Header,
     SideNavBar,
     NotSignedIn,
     VideoCard,
     CategoryLink,
-    MenuPopUp
+    MenuPopUp,
+    PlayListPopup,
+    PlaylistParent
 }
