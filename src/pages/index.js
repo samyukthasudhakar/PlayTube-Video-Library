@@ -6,6 +6,7 @@ import { HistoryPage } from 'pages/history'
 import { Login } from 'pages/login'
 import { SignUp } from 'pages/signUp'
 import { SingleVideoPage } from './singleVideoPage'
+import { PlaylistListing } from './playlistListing'
 import { PageNotFound } from './PageNotFound'
 
 export {
@@ -17,5 +18,6 @@ export {
     Login,
     SignUp,
     SingleVideoPage,
+    PlaylistListing,
     PageNotFound
 }

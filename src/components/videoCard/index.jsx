@@ -1,14 +1,17 @@
 import {useState} from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {menu} from 'assets/icons'
+import { useAuth } from 'context'
 import './videoCard.css'
 
-import { MenuPopUp } from 'components/menuPopUp';
+import { MenuPopUp, PlayListPopup } from 'components';
 
 export function VideoCard( {video} ){
     const {_id, thumbnail, duration, icon, title, creator, views, likes} = video
     const [menuToggle, setMenuToggle] = useState(false)
-
+    const [playlistToggle, setPlaylistToggle] = useState(false)
+    const {authState:{isLoggedIn}} = useAuth()
+    const navigateTo = useNavigate()
     return (
         <div className="video-card">
             <Link to={`/watch/:${_id}`}><img className="thumbnail" src={thumbnail} /></Link>
@@ -26,7 +29,14 @@ export function VideoCard( {video} ){
                     <img className='menu' src={menu} onClick={()=>setMenuToggle(!menuToggle)}/>
                 </div>
                 {
-                    menuToggle && <MenuPopUp video={video}/>
+                    menuToggle && <MenuPopUp video={video} playlist={[playlistToggle, setPlaylistToggle]}/>
+                }
+                {
+                    playlistToggle ?
+                        isLoggedIn ?
+                        <PlayListPopup video={video}/>
+                        :navigateTo('/login')
+                    :''
                 }
             </div>
         </div>

@@ -9,6 +9,7 @@ import {
   Login,
   SignUp,
   SingleVideoPage,
+  PlaylistListing,
   PageNotFound
 } from 'pages'
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/watch/:videoID' element={<SingleVideoPage />} />
+        <Route path='/playlist/:playlistID' element={<PlaylistListing />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>

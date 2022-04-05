@@ -1,10 +1,10 @@
-import { useParams } from 'react-router-dom'
-import { Header, SideNavBar } from 'components'
+import { useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+import { Header, SideNavBar, PlayListPopup } from 'components'
 import { addToPlaylist, watchLater } from 'assets/icons'
-import { useVideos } from 'context'
 import { ReactComponent as Like } from 'assets/icons/like.svg';
 import { ReactComponent as Dislike } from 'assets/icons/dislike.svg';
-import { useLikedVideos, useHistory } from 'context';
+import { useAuth, useVideos, useLikedVideos, useHistory } from 'context';
 import useScrollToTop from 'utils/hooks/useScrollToTop'
 
 import './singleVideoPage.css'
@@ -19,6 +19,9 @@ function SingleVideoPage(){
     const { likedVideos, likeToggle } = useLikedVideos()
     const liked = likedVideos.filter(video => video._id == _id).length > 0 ? "black" : "none"
     const { addToHistory } = useHistory()
+    const {authState:{isLoggedIn}} = useAuth()
+    const [playlistToggle, setPlaylistToggle] = useState(false)
+    const navigateTo = useNavigate()
     useScrollToTop()
     useEffect(()=>{
         addToHistory(video)
@@ -38,7 +41,7 @@ function SingleVideoPage(){
                 <p className="video-details-secondary">{`${views} views • ${date}`}</p>
                 <p className="flex-layout flex-center padding-rl-2" onClick={()=>likeToggle(video)}><Like fill={liked}/>244k</p>
                 <p className="flex-layout flex-center padding-rl-2" >{<Dislike fill="none" />}Dislike</p>
-                <div className="flex-layout flex-center padding-rl-2" ><img src={addToPlaylist} style={{width: "2rem", height: '2rem', marginRight:"8px"}}/>Save</div>
+                <div className="flex-layout flex-center padding-rl-2" onClick={()=>setPlaylistToggle(!playlistToggle)}><img src={addToPlaylist} style={{width: "2rem", height: '2rem', marginRight:"8px"}}/>Save</div>
                 <p className="flex-layout flex-center padding-rl-2" ><img src={watchLater} style={{width: "1.2rem", height: '1.2rem', marginRight:"8px"}}/>Watch Later</p>
             </div>
             </div>
@@ -53,6 +56,13 @@ function SingleVideoPage(){
             </div>
             </div>
             </div>
+            {
+                playlistToggle ?
+                isLoggedIn ? 
+                <PlayListPopup video={video}/>
+                : navigateTo('/login')
+                :''
+            }
         </div>
     )
 }

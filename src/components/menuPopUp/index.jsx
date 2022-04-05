@@ -1,11 +1,12 @@
 import {
-    playlist,
+    playlist as playlistIcon,
     watchLater,
 } from "assets/icons";
 import { useWatchLater } from "context";
 import checkIfPresent from 'utils/functions/checkIfPresent'
 
-export function MenuPopUp( {video} ){
+export function MenuPopUp( { video, playlist } ){
+    const [playlistToggle, setPlayListToggle] = playlist
     const { watchLaterState, addToWatchLater, removeFromWatchLater } = useWatchLater()
     return (
         <ul className="menu-options flex-start">
@@ -22,9 +23,9 @@ export function MenuPopUp( {video} ){
                     </div>
                 </li>
             }
-            <li className='menu-option'>
+            <li className='menu-option' onClick={()=>setPlayListToggle(!playlistToggle)}>
                 <div className="flex-layout">
-                <img className="menu-icon" src={playlist} />Add to Playlist
+                <img className="menu-icon" src={playlistIcon} />Add to Playlist
                 </div>
             </li>
         </ul>
