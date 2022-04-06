@@ -30,7 +30,7 @@ function PlaylistPage(){
                         <div className="flex-layout" >
                             {
                                 playlists.map((item,key)=>
-                                <div className="flex-column flex-center glass-card playlist-card" >
+                                <div className="flex-column flex-center playlist-card" >
                                 <Link to={`/playlist/:${item._id}`}><h2 key={key}>{item.title}</h2></Link>
                                 <p className='p-sm'>{`${item.videos.length} ${item.videos.length===1 ? 'video':'videos'}`}</p>
                                 <div className="flex-layout">
