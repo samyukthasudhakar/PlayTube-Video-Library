@@ -5,12 +5,15 @@ import { addToPlaylist, watchLater } from 'assets/icons'
 import { ReactComponent as Like } from 'assets/icons/like.svg';
 import { ReactComponent as Dislike } from 'assets/icons/dislike.svg';
 import { useAuth, useVideos, useLikedVideos, useHistory } from 'context';
-import useScrollToTop from 'utils/hooks/useScrollToTop'
+import { useDocumentTitle, useScrollToTop } from 'utils/hooks'
 
 import './singleVideoPage.css'
 import { useEffect } from 'react';
 
 function SingleVideoPage(){
+    
+    useDocumentTitle('Playtube | Watch')
+
     const { data: {videos} } = useVideos()
     let { videoID } = useParams()
     videoID = videoID.split(':')[1]

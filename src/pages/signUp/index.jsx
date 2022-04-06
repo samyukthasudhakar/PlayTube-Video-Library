@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from 'context/authContext'
+import { useDocumentTitle } from 'utils/hooks'
 import { logo } from 'assets/icons'
 
 import './signup.css'
 
 function SignUp(){
     
+    useDocumentTitle('Playtube | SignUp')
+
     const [user, setUser] = useState({firstName:'',lastName:'',email:'',password:''})
     const { signupHandler } = useAuth()
 

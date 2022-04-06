@@ -6,10 +6,13 @@ import {
     NotSignedIn
 } from 'components'
 import { useAuth, usePlayList } from 'context'
-
+import { useDocumentTitle } from 'utils/hooks'
 import './playlist.css'
 
 function PlaylistPage(){
+    
+    useDocumentTitle('Playtube | Playlists')
+
     const {authState:{isLoggedIn}} = useAuth()
     const { playlists, deletePlaylist } = usePlayList()
     return (
