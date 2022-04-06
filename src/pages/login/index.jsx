@@ -9,8 +9,13 @@ function Login(){
 
     useDocumentTitle('Playtube | Login')
 
-    const [user, setUser] = useState({email:'',password:''})
     const { loginHandler } = useAuth()
+    
+    const [user, setUser] = useState({email:'',password:''})
+    const show = {type: "text", icon: ""}
+    const hide = {type: "password", icon: "-slash"}
+    const [passwordToggle, setPasswordToggle] = useState(hide)
+    
 
     return(
         <div className="flex-center auth-parent">    
@@ -22,7 +27,10 @@ function Login(){
                     <span className="header-title">PlayTube</span>
                     </Link>
                     <input type="text" placeholder="Email" className='form-input mg-tb-1' onInput={(e)=>setUser({...user, email:e.target.value})} value={user.email} />
-                    <input type="password" placeholder="Password" className='form-input mg-tb-1' onInput={(e)=>setUser({...user, password:e.target.value})} value={user.password}/>
+                    <div className='flex-layout flex-center space-between form-input mg-tb-1'>
+                    <input type={passwordToggle.type} placeholder="Password" className='form-password' onInput={(e)=>setUser({...user, password:e.target.value})} value={user.password}/>
+                    <i className={`fa fa-eye${passwordToggle.icon}`} onClick={()=>setPasswordToggle(passwordToggle.type==='text'?hide:show)}/>
+                    </div>
                     <div className="flex-layout space-between w-100">
                         <div className="flex-layout">
                             <input id='remember-me' type="checkbox"/> 

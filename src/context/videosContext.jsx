@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react"
 import { VideosReducer } from "reducers/videosReducer"
-import { useAsyncServerCall } from "hooks/useAsyncServerCall"
+import { useAsyncServerCall } from "utils/hooks/useAsyncServerCall"
 import { GET_CATEGORIES, GET_VIDEOS } from "utils/constants/apiEndPoints"
 
 const videosContext = createContext(null);
