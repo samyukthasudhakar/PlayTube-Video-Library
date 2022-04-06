@@ -3,6 +3,7 @@ import { VideosProvider, useVideos } from "./videosContext";
 import { LikedVideosProvider, useLikedVideos } from "./likedVideosContext";
 import { HistoryProvider, useHistory } from "./historyContext";
 import { WatchLaterProvider, useWatchLater } from "./watchLaterContext";
+import { PlayListProvider, usePlayList } from "./playListContext";
 
 export {
   AuthProvider,
@@ -14,5 +15,7 @@ export {
   HistoryProvider,
   useHistory,
   WatchLaterProvider, 
-  useWatchLater 
+  useWatchLater,
+  PlayListProvider, 
+  usePlayList
 };

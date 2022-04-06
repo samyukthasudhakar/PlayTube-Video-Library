@@ -1,0 +1,42 @@
+.heading-icon{
+    width: 1.5rem;
+    padding-right: 3px;
+}
+
+.playlist-card{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 1rem;
+    width: 15rem;
+    height: 7rem;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--clr-white);
+}
+
+.playlist-dismiss, .playlist-listing-dismiss{
+    background: transparent;
+    border:none;
+    width:2rem;
+    height:2rem;
+    font-size: medium;
+    top: 8px;
+    right: 8px;
+    position: absolute;
+    color: grey;
+}   
+
+.playlist-listing-dismiss{
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    right: 1.2rem;
+    top: 1.2rem;
+}
+
+.playlist-dismiss:hover, .playlist-listing-dismiss:hover{
+    color: var(--clr-black);
+}
+
+.relative{
+    position: relative
+}
