@@ -22,10 +22,15 @@
 }
 
 .padding-2{
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
 .padding-rl-2{
     padding: 0 2rem;
     cursor: pointer;
+}
+
+.flex-end{
+    justify-content: 'flex-end';
+    align-items: 'flex-end';
 }
