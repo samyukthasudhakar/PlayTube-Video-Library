@@ -1,8 +1,12 @@
 import { watchLater } from 'assets/icons'
 import { Header, SideNavBar, NotSignedIn, VideoCard } from 'components'
 import { useAuth, useWatchLater } from 'context'
+import { useDocumentTitle } from 'utils/hooks'
 
 function WatchLaterPage(){
+
+    useDocumentTitle('Playtube | Watch Later')
+    
     const { authState:{isLoggedIn}} = useAuth()
     const { watchLaterState, clearWatchLater } = useWatchLater()
     return (
