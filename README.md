@@ -53,19 +53,26 @@
 ## 💻Screens
 
 ### Home Page
+![home](https://github.com/samyukthasudhakar/PlayTube-Video-Library/blob/documentation/src/assets/readmeSnippets/Capture.PNG)
 
 ### Liked Videos
+![liked](https://github.com/samyukthasudhakar/PlayTube-Video-Library/blob/documentation/src/assets/readmeSnippets/liked.PNG)
 
 ### Watch Later
+![watch later](https://github.com/samyukthasudhakar/PlayTube-Video-Library/blob/documentation/src/assets/readmeSnippets/watchlater.PNG)
 
 ### Playlist Management
+![playlist](https://github.com/samyukthasudhakar/PlayTube-Video-Library/blob/documentation/src/assets/readmeSnippets/playlist.PNG)
+![playlist videos](https://github.com/samyukthasudhakar/PlayTube-Video-Library/blob/documentation/src/assets/readmeSnippets/playlist-1.PNG)
 
 ### History
+![history](https://github.com/samyukthasudhakar/PlayTube-Video-Library/blob/documentation/src/assets/readmeSnippets/history.PNG)
 
 ### Login
+![login](https://github.com/samyukthasudhakar/PlayTube-Video-Library/blob/documentation/src/assets/readmeSnippets/login.PNG)
 
 ### SignUp
-
+![signup](https://github.com/samyukthasudhakar/PlayTube-Video-Library/blob/documentation/src/assets/readmeSnippets/signup.PNG)
 
 ## 🧩Steps to run app
 
