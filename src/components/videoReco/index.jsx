@@ -6,7 +6,7 @@ export function VideoRecommendationCard({video}){
     return(
         <Link to={`/watch/:${_id}`}>
             <div className="flex-layout reco-parent" >
-                <img className="reco-image" src={thumbnail} />
+                <img className="reco-image" src={thumbnail} alt="Video thumbnail image" />
                 <div className="flex-column flex-start">
                     <p className="reco-title">{title}</p>
                     <p className="reco-details">{creator}</p>
