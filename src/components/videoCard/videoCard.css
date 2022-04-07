@@ -15,8 +15,6 @@
 .thumbnail{
     width: 20rem;
     height: 12rem;
-    margin: 0;
-    padding: 0;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
 }
