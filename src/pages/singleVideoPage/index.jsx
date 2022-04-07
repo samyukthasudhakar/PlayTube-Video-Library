@@ -30,7 +30,7 @@ function SingleVideoPage(){
     
     useEffect(()=>{
         addToHistory(video)
-    },[])
+    },[video])
 
     return (
         <div>
