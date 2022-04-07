@@ -30,7 +30,7 @@ function SingleVideoPage(){
     
     useEffect(()=>{
         addToHistory(video)
-    },[])
+    },[video])
 
     return (
         <div>
@@ -47,11 +47,11 @@ function SingleVideoPage(){
                 <p className="video-details-secondary">{`${views} views • ${date}`}</p>
                 <p className="flex-layout flex-center padding-rl-2" onClick={()=>likeToggle(video)}><Like fill={liked}/>244k</p>
                 <div className="flex-layout flex-center padding-rl-2" onClick={()=>setPlaylistToggle(!playlistToggle)}><img src={addToPlaylist} style={{width: "2rem", height: '2rem', marginRight:"8px"}}/>Save</div>
-                <p className="flex-layout flex-center padding-rl-2" onClick={() =>{
+                {
                     !checkIfPresent( video._id, watchLaterState) ?
-                    addToWatchLater(video):
-                    removeFromWatchLater(video)
-                }}><img src={watchLater} style={{width: "1.2rem", height: '1.2rem', marginRight:"8px"}}/>Watch Later</p>
+                    <p className="flex-layout flex-center padding-rl-2" onClick={() =>addToWatchLater(video)}><img src={watchLater} style={{width: "1.2rem", height: '1.2rem', marginRight:"8px"}}/>Watch Later</p>
+                    :<p className="flex-layout flex-center padding-rl-2" onClick={() =>removeFromWatchLater(video)}><img src={watchLater} style={{width: "1.2rem", height: '1.2rem', marginRight:"8px"}}/>Remove from Watch Later</p>
+                }
             </div>
             <div style={{display:"flex", justifyContent:"flex-start", alignItems:"flex-start"}}>
             <div className="flex-layout flex-center">
