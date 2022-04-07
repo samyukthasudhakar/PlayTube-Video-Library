@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from 'context/authContext'
+import { useAuth, useVideos } from 'context/'
 import { logo } from 'assets/icons'
 import './header.css'
 
 function Header(){
     const navigateTo = useNavigate()
     const { authState:{isLoggedIn}, authDispatch } = useAuth()
-
+    const { videosDispatch } = useVideos()
     function logOutHandler (){
         
         const response = window.confirm('You are logging out. Choose "Ok" if you are sure.')
         if (response) {
+        videosDispatch({type: 'SET_CATEGORY_FILTER', payload: 'All'})
         authDispatch({type:'LOG_OUT',payload:''})
         navigateTo("/")
         }
