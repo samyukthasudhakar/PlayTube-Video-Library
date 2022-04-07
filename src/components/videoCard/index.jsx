@@ -14,7 +14,9 @@ export function VideoCard( {video} ){
     const navigateTo = useNavigate()
     return (
         <div className="video-card">
-            <Link to={`/watch/:${_id}`}><img className="thumbnail" src={thumbnail} /></Link>
+            <Link to={`/watch/:${_id}`}>
+                <img className="thumbnail" src={thumbnail} alt="Video thumbnail image"/>
+            </Link>
             <span className="time-badge">{duration}</span>
             <div className="flex-layout video-description">
                 <img className="avatar" src={icon}/>

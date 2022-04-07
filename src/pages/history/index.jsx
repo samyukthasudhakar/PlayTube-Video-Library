@@ -1,10 +1,14 @@
 import { history } from 'assets/icons'
 import { Header, SideNavBar, NotSignedIn, VideoCard } from 'components'
 import { useAuth, useHistory } from 'context'
+import { useDocumentTitle } from 'utils/hooks'
 
 import './history.css'
 
 function HistoryPage(){
+
+    useDocumentTitle('Playtube | History')
+
     const { authState:{isLoggedIn}} = useAuth()
     const { historyState, clearHistory } = useHistory()
 

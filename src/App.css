@@ -3,3 +3,7 @@
     --clr-secondary: #c5d7ff;
     --clr-tertiary: #ddd;
 }
+*{
+    margin: 0;
+    padding: 0;
+}

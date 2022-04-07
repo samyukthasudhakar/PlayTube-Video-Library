@@ -1,0 +1,20 @@
+.reco-parent{
+    width: 24rem;
+    margin-bottom: 1rem;
+}
+
+.reco-image{
+    width: 11rem;
+    height: 7rem;
+    margin-right: 4px;
+}
+
+.reco-title, .reco-details{
+    font-size: 13.5px;
+    color: grey;
+}
+
+.reco-title{
+    font-weight: bold;
+    color: black;
+}

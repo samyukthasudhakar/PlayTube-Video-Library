@@ -1,11 +1,15 @@
 import { Header, SideNavBar, VideoCard, CategoryLink } from 'components'
 import { useVideos } from 'context'
-
+import { useDocumentTitle } from 'utils/hooks'
 import './home.css'
 
 function HomePage(){
+
+    useDocumentTitle('Playtube | Home')
+
     const {data:{videos, categories, categoryFilter}, getFilteredData} = useVideos()
     const filteredData  = getFilteredData(categoryFilter, videos)
+    
     return (
         <div>
             <Header />

@@ -1,8 +1,12 @@
 import { useParams } from 'react-router-dom'
 import { usePlayList } from 'context'
 import { Header, SideNavBar, VideoCard } from 'components'
+import { useDocumentTitle } from 'utils/hooks'
 
 function PlaylistListing(){
+
+    useDocumentTitle('Playtube | Playlist')
+    
     const { playlists, deleteFromPlaylist } = usePlayList()
     let { playlistID } = useParams()
     playlistID = playlistID.split(':')[1]

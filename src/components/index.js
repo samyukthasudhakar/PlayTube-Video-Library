@@ -5,6 +5,7 @@ import { VideoCard } from './videoCard'
 import { CategoryLink } from './categoryLink'
 import { MenuPopUp } from './menuPopUp'
 import { PlayListPopup } from './playlistPopUp'
+import { VideoRecommendationCard } from './videoReco'
 
 export { 
     Header,
@@ -13,5 +14,6 @@ export {
     VideoCard,
     CategoryLink,
     MenuPopUp,
-    PlayListPopup
+    PlayListPopup,
+    VideoRecommendationCard
 }

@@ -2,10 +2,13 @@ import { useAuth, useLikedVideos } from 'context'
 import { like } from 'assets/icons'
 import { Header, SideNavBar, NotSignedIn, VideoCard } from 'components'
 import { ReactComponent as Like } from 'assets/icons/like.svg';
-
+import { useDocumentTitle } from 'utils/hooks'
 import './liked.css'
 
 function LikedPage(){
+    
+    useDocumentTitle('Playtube | Liked Videos')
+
     const {authState:{isLoggedIn}} = useAuth()
     const { likedVideos } = useLikedVideos()
     return (
